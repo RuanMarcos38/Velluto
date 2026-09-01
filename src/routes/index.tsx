@@ -126,13 +126,16 @@ function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="bg-graphite text-cream/85">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-1 px-6 py-2 text-center sm:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-6 py-2.5 text-center sm:flex-row">
           <p className="eyebrow">A Modeski agora é VELLUTO Home Decor</p>
-          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 sm:justify-end">
+            <a className="eyebrow transition-colors hover:text-gold" href={PHONE_LINK}>
+              {PHONE_DISPLAY}
+            </a>
+            <span className="hidden h-3 w-px bg-cream/25 sm:block" aria-hidden="true" />
             <a className="eyebrow transition-colors hover:text-gold" href={`mailto:${EMAIL}`}>
               {EMAIL}
             </a>
-            <p className="eyebrow text-gold">Desde 1988</p>
           </div>
         </div>
       </div>
@@ -236,7 +239,9 @@ function Index() {
           <div className="mx-auto max-w-6xl">
             <div className="max-w-xl">
               <p className="eyebrow text-wine">Soluções</p>
-              <h2 className="mt-6 text-[clamp(2rem,3.4vw,3rem)] leading-tight">Feito à medida do seu espaço.</h2>
+              <h2 className="mt-6 text-[clamp(2rem,3.4vw,3rem)] leading-tight">
+                Feito à medida do seu espaço.
+              </h2>
             </div>
             <div className="mt-16 grid gap-10 md:grid-cols-3">
               {SOLUTIONS.map((solution) => (
@@ -261,7 +266,9 @@ function Index() {
           <div className="mx-auto max-w-6xl">
             <div className="max-w-2xl">
               <p className="eyebrow text-wine">A experiência VELLUTO</p>
-              <h2 className="mt-6 text-[clamp(2rem,3.4vw,3rem)] leading-tight">Do primeiro olhar ao ambiente final.</h2>
+              <h2 className="mt-6 text-[clamp(2rem,3.4vw,3rem)] leading-tight">
+                Do primeiro olhar ao ambiente final.
+              </h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
                 Antes de escolher tecidos ou mecanismos, entendemos o seu estilo, a sua rotina e as necessidades reais de cada ambiente.
               </p>
@@ -282,20 +289,24 @@ function Index() {
           </div>
         </section>
 
-        <section className="relative isolate overflow-hidden">
-          <img
-            src="/images/decoracao-sob-medida.webp"
-            alt="Projeto real de sala contemporânea com cortinas claras do piso ao teto"
-            loading="lazy"
-            width={868}
-            height={1156}
-            className="h-[60vh] min-h-[420px] w-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-graphite/48" />
-          <div className="absolute inset-0 flex items-center px-6">
-            <div className="mx-auto w-full max-w-6xl text-cream">
+        <section className="grid overflow-hidden bg-graphite lg:min-h-[620px] lg:grid-cols-[1.18fr_0.82fr]">
+          <div className="relative min-h-[520px] lg:min-h-full">
+            <img
+              src="/images/decoracao-sob-medida.webp"
+              alt="Ambiente real com cortinas claras instalado pela VELLUTO"
+              loading="lazy"
+              className="absolute inset-0 h-full w-full object-cover object-center"
+            />
+          </div>
+          <div className="flex items-center px-6 py-20 text-cream md:px-14 lg:py-24">
+            <div className="mx-auto w-full max-w-lg lg:mx-0">
               <p className="eyebrow text-gold">Residencial &amp; corporativo</p>
-              <h2 className="mt-6 max-w-2xl text-[clamp(2rem,4vw,3.4rem)] leading-tight">Ambientes que revelam personalidade.</h2>
+              <h2 className="mt-7 text-[clamp(2rem,4vw,3.4rem)] leading-tight">
+                Ambientes que revelam personalidade.
+              </h2>
+              <p className="mt-7 max-w-md text-base leading-relaxed text-cream/72">
+                Cada projeto parte do espaço real, da luz e da rotina de quem vive o ambiente. O resultado é natural, funcional e feito para durar.
+              </p>
             </div>
           </div>
         </section>
@@ -304,18 +315,24 @@ function Index() {
           <div className="mx-auto grid max-w-6xl gap-14 lg:grid-cols-2">
             <div>
               <p className="eyebrow text-wine">Contato</p>
-              <h2 className="rule-gold mt-6 text-[clamp(2rem,3.4vw,3rem)] leading-tight">Seu novo ambiente começa aqui.</h2>
+              <h2 className="rule-gold mt-6 text-[clamp(2rem,3.4vw,3rem)] leading-tight">
+                Seu novo ambiente começa aqui.
+              </h2>
               <p className="mt-8 max-w-md text-lg leading-relaxed text-muted-foreground">
                 Atendimento personalizado para residências e empresas em Joinville e região.
               </p>
               <div className="mt-9 space-y-3 text-sm text-muted-foreground">
                 <p>
                   <span className="eyebrow mr-3 text-wine">Telefone</span>
-                  <a className="transition-colors hover:text-wine" href={PHONE_LINK}>{PHONE_DISPLAY}</a>
+                  <a className="transition-colors hover:text-wine" href={PHONE_LINK}>
+                    {PHONE_DISPLAY}
+                  </a>
                 </p>
                 <p className="break-words">
                   <span className="eyebrow mr-3 text-wine">E-mail</span>
-                  <a className="transition-colors hover:text-wine" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+                  <a className="transition-colors hover:text-wine" href={`mailto:${EMAIL}`}>
+                    {EMAIL}
+                  </a>
                 </p>
               </div>
               <a
@@ -336,7 +353,9 @@ function Index() {
                 className="block border border-border bg-card p-8 transition-colors hover:border-gold"
               >
                 <p className="eyebrow text-muted-foreground">Showroom</p>
-                <address className="mt-4 font-display text-2xl not-italic leading-snug text-wine">{ENDERECO}</address>
+                <address className="mt-4 font-display text-2xl not-italic leading-snug text-wine">
+                  {ENDERECO}
+                </address>
                 <p className="eyebrow mt-6 text-gold">Ver no Google Maps</p>
               </a>
               <iframe
@@ -363,7 +382,11 @@ function Index() {
           />
           <div className="md:justify-self-center">
             <p className="text-sm text-cream/70">Cortinas, persianas e decoração sob medida em Joinville.</p>
-            <a className="mt-2 block text-sm text-cream/70 transition-colors hover:text-gold" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-cream/70 md:justify-start">
+              <a className="transition-colors hover:text-gold" href={PHONE_LINK}>{PHONE_DISPLAY}</a>
+              <span className="text-cream/25" aria-hidden="true">•</span>
+              <a className="transition-colors hover:text-gold" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            </div>
           </div>
           <p className="eyebrow text-cream/40">© {new Date().getFullYear()} VELLUTO</p>
         </div>
