@@ -115,6 +115,20 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
         <script
           async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18180178360"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-18180178360');
+            `,
+          }}
+        ></script>
+        <script
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4258015992085102"
           crossOrigin="anonymous"
         ></script>
